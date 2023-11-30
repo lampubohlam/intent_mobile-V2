@@ -8,7 +8,7 @@
 
 
 # Menu utama
-  disini saya hanya menambahkan coding dari button menjadi Imagebutton saja berikut hasil codingannya serta menambah linearliyout
+  disini saya hanya menambahkan coding dari button menjadi Imagebutton dan menambahkan source dan LinearLayout serta menambahkan icon gambar default yang sudah disediakan di Android Studio berikut hasil codingannya
 
            <?xml version="1.0" encoding="utf-8"?>
       <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -113,55 +113,66 @@ berikut codingannnya
 di java saya tidak terlalu merubah fungsi apapun berikut tamilan codingnya
 
 
+
                package com.example.tugas9;
+              
+              import androidx.appcompat.app.AppCompatActivity;
+              
+              import android.os.Bundle;
+              
+              import android.content.Intent;
+              import android.view.View;
+              
+              public class MainActivity extends AppCompatActivity {
+              
+                  @Override
+                  protected void onCreate(Bundle savedInstanceState) {
+                      super.onCreate(savedInstanceState);
+                      setContentView(R.layout.activity_main);
+              
+                      findViewById(R.id.btnSetAlarm).setOnClickListener(new View.OnClickListener() {
+                          @Override
+                          public void onClick(View v) {
+                              // Panggil metode untuk mengatur alarm
+                              setAlarm();
+                          }
+                      });
+                  }
+                  private void setAlarm() {
+                      Intent alarm = new Intent(android.provider.AlarmClock.ACTION_SET_ALARM);
+                      startActivity(alarm);
+                  }
+              
+                  public void btnHelloWorld(View view) {
+                      Intent helloworld = new Intent(MainActivity.this, Hello.class);
+                      startActivity(helloworld);
+                  }
+              
+                  public void btnCount(View view) {
+                      Intent count = new Intent(MainActivity.this, Count.class);
+                      startActivity(count);
+                  }
+              
+                  public void btnSianida(View view) {
+                      Intent sianida = new Intent(MainActivity.this, SianidaActivity.class);
+                      startActivity(sianida);
+                  }
+              
+                  public void btnTwoActivity(View view) {
+                      Intent twoact = new Intent(MainActivity.this, twoactivity.class);
+                      startActivity(twoact);
+                  }
+              }
+# hasil run
 
-   import androidx.appcompat.app.AppCompatActivity;
+https://github.com/lampubohlam/intent_mobile-V2/assets/116137169/8987303c-a152-4560-8d03-c59450f4fd86
 
-   import android.os.Bundle;
 
-   import android.content.Intent;
-   import android.view.View;
 
-   public class MainActivity extends AppCompatActivity {
+<h3>Terimakasih sudah membaca :) hoho </h3>
 
-       @Override
-       protected void onCreate(Bundle savedInstanceState) {
-       super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btnSetAlarm).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Panggil metode untuk mengatur alarm
-                setAlarm();
-            }
-        });
-    }
-    private void setAlarm() {
-        Intent alarm = new Intent(android.provider.AlarmClock.ACTION_SET_ALARM);
-        startActivity(alarm);
-    }
 
-    public void btnHelloWorld(View view) {
-        Intent helloworld = new Intent(MainActivity.this, Hello.class);
-        startActivity(helloworld);
-    }
 
-    public void btnCount(View view) {
-        Intent count = new Intent(MainActivity.this, Count.class);
-        startActivity(count);
-    }
 
-    public void btnSianida(View view) {
-        Intent sianida = new Intent(MainActivity.this, SianidaActivity.class);
-        startActivity(sianida);
-    }
-
-    public void btnTwoActivity(View view) {
-        Intent twoact = new Intent(MainActivity.this, twoactivity.class);
-        startActivity(twoact);
-    }
-}
-        
-        
-
+   
