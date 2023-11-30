@@ -8,7 +8,7 @@
 
 
 # Menu utama
-  disini saya hanya menambahkan coding dari button menjadi Imagebutton dan menambahkan source dan LinearLayout serta menambahkan icon gambar default yang sudah disediakan di Android Studio berikut hasil codingannya
+  disini saya hanya menambahkan coding dari button menjadi Imagebutton dari hasil 1 kemarin dan menambahkan source dan LinearLayout serta menambahkan icon gambar default yang sudah disediakan di Android Studio berikut hasil codingannya
 
            <?xml version="1.0" encoding="utf-8"?>
       <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
