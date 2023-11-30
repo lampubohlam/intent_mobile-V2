@@ -1,5 +1,3 @@
-![image](https://github.com/lampubohlam/intent_mobile-V2/assets/116137169/0c5628e1-8557-42e9-854f-4bb37cc64543)# intent_mobile-V2
-
 <h4>Nama : Abdul Aziz
 <br>Nim :312210022
 <br>Matakuliah : Pemorograman Mobile
